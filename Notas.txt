@@ -1,0 +1,123 @@
+- Lección 04: 
+
+1. Descargamos el código del proyecto desde el repositorio en GitHub
+   https://github.com/gazoo80/webpack-starter
+   Lo descargamos como zip
+
+2. Creo la carpeta Seccion10 y muevo el contenido del zip descargado desde nuestro
+   repositorio (archivos y carpetas) hacia esta carpeta (Seccion10)
+
+3. Reconstruimos los módulos de node. Para eso, en la terminal, estando en la carpeta
+   del proyecto (Seccion10) ejecutamos el sgte comando:
+   npm install
+   Con esto, en la carpeta del proyecto aparecerá la carpeta node_modules
+
+4. En la terminal ejecutamos npm start para que inicie el servidor de webpack.
+   Aparecerá en el explorador la página tal y como la dejamos en la sección anterior
+
+5. Reemplazamos el contenido de src/index.html con el contenido de index.html que se
+   encuentra en el material de la clase.
+
+6. Reemplazamos el contenido de src/styles.css con el contenido de styles.css que se
+   encuentra en el material de la clase.
+
+--------------------------------------------------------------------------------------
+
+Lección 05, 06, 07, 08, 09
+
+1. En la carpeta src creamos la carpeta classes y dentro de esta el archivo
+   todo.class.js (no es obligatorio que el archivo se llame así)
+
+2. En la carpeta classes crear el archivo todo-list.class.js praa manejar
+   todo lo referente a la llista de todo
+
+3. Cuando en src/index.js instanciamos todo.class y todo-list.class automáticamente
+   se crean los imports que vamos a necesitar para poder acceder a esas clases.
+   Pero para mantener un orden y no llenar de imports nuestro index.js vamos a 
+   centralizar las importaciones.
+   Creamos un archivo js en classes. classes/index.js
+   En este archivo vamos a importar y al mismo tiempo exportar lo que vamos
+   a necesitar 
+
+4. En src/js/componentes.js creamos la función que creará el html de la 
+   tarea agregada
+
+5. En src/js/componentes.js creamos el evento de la caja de texto para ingresar
+   nuevas tareas. Cuando hagamos clic en enter, una nueva tarea se agregará y
+   podremos verla en la parte inferior de la lista
+
+6. En src/js/componentes.js creamos el evento click de la tarea para seleccionarla
+   como completada o no haciendo clic en el checkbox.
+
+--------------------------------------------------------------------------------------
+
+Lección 12: LocalStorage y SessionStorage
+
+SessionStorage: Todo lo que se haya guardado aquí se purga cuando se cierra por completo
+                el navegador web.
+LocalStorage: La información almacenada en localStorage no posee tiempo de expiración.
+            OJO: Hay un localStorage por dominio
+
+Para el caso de Google Chrome se puede ver la información almacenada en ambos en
+Herramientas para desarrolladores y la opción Aplicación
+
+1. Para agregar un item en localStorage:
+   localStorage.setItem("mi-key", "ABC123");
+
+2. Para modificar un item en localStorage:
+   localStorage.setItem("mi-key", "ABC1234");
+
+3. Para remover un item en localStorage:
+   localStorage.removeItem("mi-key");
+
+4. De igual forma se manejan los items en SessionStorage
+   sessionStorage.setItem("mi-key2", "XYZ987");
+
+5. Vamos a persistir los datos de la aplicación (la lista de tareas). Para eso creamos
+   dos nuevos métodos n todo-list.class.js:
+   guardarLocalStorage() y cargarLocalStorage()
+   
+--------------------------------------------------------------------------------------
+
+Lección 13: Guardando y recuperando Todos
+
+1. Desarrollo de los métodos guardarLocalStorage() y cargarLocalStorage()
+
+2. Uso de JSON.stringify() y JSON.parse();
+
+3. En index.js construcción del HTML con las tareas existentes cargadas desde
+   LocalStorage.
+   
+--------------------------------------------------------------------------------------
+
+Lección 14: Reconstruyendo instancias de Todos
+
+1. Creando en la clase Todo el método estático fromJson que nos ayudará a reconstruir 
+   instancias de la clase Todo a partir de los objetos sin tipo cargados desde el
+   LocalStorage. Uso de desestruturación.
+
+2. En la clase TodoList, en el método cargarLocalStorage, usamos el método estático
+   fromJson() y map() para lograr que los elementos de this.todos sean instancias 
+   de la clase Todo.
+   
+--------------------------------------------------------------------------------------
+
+Lección 15: Aplicar filtros
+
+1. En src/js/componentes.js creamos el evento click de la <ul> filtros "ulFiltros"
+   Para actuar de acuerdo a si se hace clic en Todas, Pendientes o Completadas
+   
+--------------------------------------------------------------------------------------
+
+Lección 16: Subimos la App Todos a GitHub Pages
+
+1. En GitHub creamos un nuevo repositorio
+   https://github.com/gazoo80/todo-js.git
+
+2. Detenemos el servidor de webpack
+
+3. 
+  
+
+
+
