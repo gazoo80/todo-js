@@ -132,3 +132,11 @@ Lección 16: Subimos la App Todos a GitHub Pages
 8. Como hay nuevos cambios, entonces otra vez
    git add .
    git commit -m "Docs creados"
+
+9. Enlazams el repositorio local (el proyecto) con GitHub
+   git remote add origin https://github.com/gazoo80/todo-js.git
+   git push -u origin master
+
+10. Configuramos GitHub Pages en el repositorio del proyecto para que publique 
+    el sitio y ahora podremos ver nuestra app en línea 
+    https://gazoo80.github.io/todo-js/
