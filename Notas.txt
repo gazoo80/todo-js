@@ -116,8 +116,19 @@ Lección 16: Subimos la App Todos a GitHub Pages
 
 2. Detenemos el servidor de webpack
 
-3. 
-  
+3. En la terminal, siempre en la carpeta del proyecto, iniciamos el repositorio
+   GIT en nuestro proyecto ejecutando:
+   git init
 
+4. Ahora git add .
 
+5. Ahora git commit -m "Primer commit"
 
+6. Ahora generamos la carpeta dist:
+   npm run build
+
+7. Eliminamos la carpeta docs. Y renombramos la carpeta dist como docs
+
+8. Como hay nuevos cambios, entonces otra vez
+   git add .
+   git commit -m "Docs creados"
