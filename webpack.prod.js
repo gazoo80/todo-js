@@ -17,7 +17,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    mode: "production", //quiero ver mis archivos tal como los cree (indentación, comentartios, etc.)
+    mode: "production",
     //devtool: false, //Para que no use devtool en el archivo main.js
     output: { //Nombre del archivo de salida
         filename: "main.[contenthash].js",
